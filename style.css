@@ -1,0 +1,96 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* h1のスタイル */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* 投稿一覧のレイアウト */
+#works {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 投稿のカード */
+.work-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+}
+
+/* 画像 */
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* タイトル */
+.work-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* 説明文 */
+.work-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* リンクボタン */
+.work-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #0073e6;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.work-link:hover {
+  background: #005bb5;
+}
+
+/* 🎯 レスポンシブデザイン */
+@media (min-width: 1024px) {
+  #works {
+    grid-template-columns: repeat(4, 1fr); /* PC：4列 */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #works {
+    grid-template-columns: repeat(3, 1fr); /* タブレット：3列 */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  #works {
+    grid-template-columns: repeat(2, 1fr); /* スマホ（中）：2列 */
+  }
+}
+
+@media (max-width: 479px) {
+  #works {
+    grid-template-columns: repeat(1, 1fr); /* スマホ（小）：1列 */
+  }
+}
