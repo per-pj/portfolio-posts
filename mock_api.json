@@ -3,31 +3,31 @@
     {
       "id": "hcijtiyd4",
       "createdAt": "2025-03-19T00:34:16.329Z",
-      "updatedAt": "2025-03-19T00:34:16.329Z",
+      "updatedAt": "2025-03-21T19:24:19.647Z",
       "publishedAt": "2025-03-19T00:34:16.329Z",
-      "revisedAt": "2025-03-19T00:34:16.329Z",
+      "revisedAt": "2025-03-21T19:24:19.647Z",
       "title": "Soundfork",
       "logo": {
-        "url": "https://images.microcms-assets.io/assets/1457e4b2cfe54eb4a687d656ca255301/849e3e6494104256b52cf4d4bde06390/Frame%202.png",
-        "height": 250,
-        "width": 250
+        "url": "https://images.microcms-assets.io/assets/1457e4b2cfe54eb4a687d656ca255301/bf7add96bec64a57b34a5d7d47f4cd0c/soundfork.jpeg",
+        "height": 675,
+        "width": 675
       },
-      "description": "音声データにサウンドエフェクトを簡単に追加できるサービス。",
+      "description": "音声データにサウンドエフェクトを簡単に追加できるサービスです。",
       "url": "https://soundfork.netlify.app/"
     },
     {
       "id": "rg8er0ag-q",
       "createdAt": "2025-03-19T00:32:43.233Z",
-      "updatedAt": "2025-03-19T00:32:43.233Z",
+      "updatedAt": "2025-03-21T19:24:30.848Z",
       "publishedAt": "2025-03-19T00:32:43.233Z",
-      "revisedAt": "2025-03-19T00:32:43.233Z",
+      "revisedAt": "2025-03-21T19:24:30.848Z",
       "title": "Skytracker",
       "logo": {
-        "url": "https://images.microcms-assets.io/assets/1457e4b2cfe54eb4a687d656ca255301/ee7f338272034a6bb769eedd3fb0e04b/Frame%201.png",
-        "height": 250,
-        "width": 250
+        "url": "https://images.microcms-assets.io/assets/1457e4b2cfe54eb4a687d656ca255301/598bfb1784824e1c87006ac04ec1565a/skytracker.jpeg",
+        "height": 675,
+        "width": 675
       },
-      "description": "世界中の都市の今日の天気を調べることができるサービス。",
+      "description": "世界中の都市の今日の天気を調べることができるサービスです。",
       "url": "https://skytrackr.netlify.app/"
     }
   ],
