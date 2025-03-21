@@ -1,4 +1,17 @@
-const API_URL = '/.netlify/functions/fetchData'; // Netlify Functionのエンドポイント
+// const API_URL = '/.netlify/functions/fetchData'; // Netlify Functionのエンドポイント
+
+let API_URL;
+
+if (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1'
+) {
+  // ローカル環境の場合
+  API_URL = 'http://localhost:8000/mock_api.json';
+} else {
+  // 本番環境（Netlify）の場合
+  API_URL = '/.netlify/functions/fetchData';
+}
 
 async function fetchData() {
   try {
