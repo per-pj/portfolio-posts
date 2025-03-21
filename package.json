@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-posts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/per-pj/portfolio-posts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/per-pj/portfolio-posts/issues"
+  },
+  "homepage": "https://github.com/per-pj/portfolio-posts#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
