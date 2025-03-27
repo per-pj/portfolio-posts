@@ -6,13 +6,18 @@
     <title>per-pj | ポートフォリオサイト</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- header -->
     <header class="header">
       <div class="logo">
-        <a href="index.html"><h1 class="logo-text">per-pj</h1></a>
+        <a href="index.html" class="logo-text" aria-label="Home">per-pj</a>
       </div>
+
       <button class="toggle-menu">
         <span></span>
         <span></span>
@@ -21,23 +26,55 @@
       <nav class="nav">
         <ul class="nav-menu">
           <li>
+            <a href="#works">Portfolio</a>
+          </li>
+          <li>
+            <a href="https://per-pj.github.io/per-pj/" target="_blank">About</a>
+          </li>
+          <li>
             <a href="https://per-pj.github.io/per-pj/" target="_blank"
-              >プロフィール</a
+              >Knowledge</a
             >
           </li>
           <li>
-            <a href="#works">ポートフォリオ</a>
-          </li>
-          <li>
             <a href="https://forms.gle/f1VjgzjcUNBJVWAA9" target="_blank"
-              >お問い合わせ</a
+              >Contact</a
             >
           </li>
         </ul>
       </nav>
     </header>
     <main class="container">
-      <!-- <h1>Portfolio</h1> -->
+      <div class="content">
+        <h1 class="title-text">Portfolio</h1>
+        <p class="desc-text">
+          興味のあるAPIを活用した個人開発のMVPの一部をデザインポートフォリオとして掲載しています。学習用に開発した実装コストの低いプロダクトです。今後も一部のプロダクトを掲載する予定です。
+        </p>
+        <div class="links">
+          <a
+            href="https://github.com/per-pj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.behance.net/per-pj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-behance"></i>
+          </a>
+          <a
+            href="https://forms.gle/f1VjgzjcUNBJVWAA9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <!-- APIで表示 -->
       <div id="works"></div>
     </main>
     <!-- footer -->

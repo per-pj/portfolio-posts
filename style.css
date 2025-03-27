@@ -1,9 +1,9 @@
-/* 全体のスタイル */
+/* ====== style ====== */
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: #000;
   font-size: 1rem;
   color: #fff;
@@ -15,15 +15,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-/* header */
+
+/* text */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== header ====== */
 .header {
   background-color: #000;
   color: #fff;
-  padding: 0 40px;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,9 +49,9 @@ body {
 }
 
 .logo .logo-text {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 1.6rem;
   color: #fff;
+  font-weight: 800;
 }
 
 /* nav */
@@ -57,15 +68,20 @@ body {
 }
 
 .nav .nav-menu li {
-  margin-left: 30px;
+  margin-left: 2rem;
 }
 
 .nav .nav-menu li a {
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
-  color: #fff;
+  transition: all 0.1s ease;
+}
+.nav .nav-menu li a:hover {
+  border-bottom: 2px solid #fff;
 }
 
-/* トグルメニュー (初期状態では非表示) */
+/* toggle-menu (初期状態では非表示) */
 .toggle-menu {
   display: none; /* デスクトップ表示では非表示 */
   background: none;
@@ -88,10 +104,173 @@ body {
   border-radius: 1px;
 }
 
-/* レスポンシブ対応 (画面幅が768px以下の場合) */
+/* layout */
+.container {
+  height: auto;
+  padding: 8rem 3rem 0 3rem;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+.links {
+  margin: 2rem 0;
+}
+
+/* text */
+.title-text {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.desc-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ====== API ====== */
+/* posts-layout */
+#works {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+}
+
+/* post-card */
+.work-item {
+  background: #202020;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+}
+
+/* img */
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* title-text */
+.work-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* desc-text */
+.work-description {
+  font-size: 0.9rem;
+}
+
+/* link-btn */
+.work-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background: #5d5d5d;
+  color: #fff;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.work-link:hover {
+  background: #888;
+  transform: scale(1.05);
+}
+
+/* ====== footer ====== */
+.footer {
+  background-color: #000;
+  padding: 20px 40px;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.footer .copyright {
+  color: #fff;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ====== icon ====== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-brands {
+  font-size: 2.5rem;
+  color: #fff;
+  transition: color 0.3s;
+  margin: 2rem;
+}
+
+.fa-github:hover {
+  color: #2ea043;
+}
+
+.fa-behance:hover {
+  color: #1769ff;
+}
+
+.fa-solid {
+  font-size: 2.5rem;
+  color: #fff;
+  transition: color 0.3s;
+  margin: 2rem;
+}
+
+.fa-envelope:hover {
+  color: #d45f2d;
+}
+
+/* 🎯 ====== responsive-layout ====== */
+@media (min-width: 1024px) {
+  #works {
+    grid-template-columns: repeat(4, 1fr); /* PC：4列 */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #works {
+    grid-template-columns: repeat(3, 1fr); /* タブレット：3列 */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  #works {
+    grid-template-columns: repeat(2, 1fr); /* スマホ（中）：2列 */
+  }
+}
+
+@media (max-width: 479px) {
+  #works {
+    grid-template-columns: repeat(1, 1fr); /* スマホ（小）：1列 */
+  }
+}
+
+/* ====== responsive ====== */
 @media (max-width: 768px) {
   body {
-    padding-top: 60px;
+    padding: 60px 0 0 0;
+  }
+
+  .header {
+    padding: 1rem;
   }
 
   .nav {
@@ -132,6 +311,10 @@ body {
     text-decoration: none;
   }
 
+  .nav .nav-menu li a:hover {
+    border-bottom: 5px solid #000;
+  }
+
   .toggle-menu {
     display: flex;
     position: absolute;
@@ -159,110 +342,17 @@ body {
     transform: rotate(45deg);
     background-color: #000;
   }
-}
 
-.container {
-  height: auto;
-  padding: 100px 40px 0 40px;
-}
-/* h1のスタイル */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-/* 投稿一覧のレイアウト */
-#works {
-  display: grid;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-/* 投稿のカード */
-.work-item {
-  background: #202020;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  padding: 0.8rem;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.work-item:hover {
-  transform: translateY(-5px);
-}
-
-/* 画像 */
-.work-image {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-/* タイトル */
-.work-title {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-}
-
-/* 説明文 */
-.work-description {
-  font-size: 0.9rem;
-}
-
-/* リンクボタン */
-.work-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 10px 20px;
-  background: #5d5d5d;
-  color: #fff;
-  border-radius: 2rem;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.work-link:hover {
-  background: #888;
-  transform: scale(1.05);
-}
-
-/* footer */
-.footer {
-  background-color: #000;
-  padding: 20px 40px;
-  text-align: center;
-  margin-top: 6rem;
-}
-
-.footer .copyright {
-  color: #fff;
-  font-size: 0.8rem;
-}
-
-/* 🎯 レスポンシブデザイン */
-@media (min-width: 1024px) {
-  #works {
-    grid-template-columns: repeat(4, 1fr); /* PC：4列 */
+  .container {
+    padding: 6rem 1rem 0 1rem;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  #works {
-    grid-template-columns: repeat(3, 1fr); /* タブレット：3列 */
+  .content {
+    width: 100%;
+    margin: auto 0;
   }
-}
 
-@media (min-width: 480px) and (max-width: 767px) {
   #works {
-    grid-template-columns: repeat(2, 1fr); /* スマホ（中）：2列 */
-  }
-}
-
-@media (max-width: 479px) {
-  #works {
-    grid-template-columns: repeat(1, 1fr); /* スマホ（小）：1列 */
+    padding: 0;
   }
 }
