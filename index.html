@@ -3,53 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>per-pj | ポートフォリオサイト</title>
+    <title>per-pj | Portfolio</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
-    <!-- header -->
+    <!---------- header ---------->
     <header class="header">
+      <!-- logo -->
       <div class="logo">
         <a href="index.html" class="logo-text" aria-label="Home">per-pj</a>
       </div>
-
+      <!-- toggle -->
       <button class="toggle-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <!-- menu -->
       <nav class="nav">
         <ul class="nav-menu">
           <li>
-            <a href="#works">Portfolio</a>
-          </li>
-          <li>
-            <a href="https://per-pj.github.io/per-pj/" target="_blank">About</a>
+            <a href="#works">作品</a>
           </li>
           <li>
             <a href="https://per-pj.github.io/per-pj/" target="_blank"
-              >Knowledge</a
+              >プロフィール</a
+            >
+          </li>
+          <li>
+            <a href="https://per-pj.github.io/per-pj/" target="_blank"
+              >ナレッジ</a
             >
           </li>
           <li>
             <a href="https://forms.gle/f1VjgzjcUNBJVWAA9" target="_blank"
-              >Contact</a
+              >お問い合わせ</a
             >
           </li>
         </ul>
       </nav>
     </header>
+    <!---------- main ---------->
     <main class="container">
       <div class="content">
-        <h1 class="title-text">Portfolio</h1>
+        <h1 class="title-text">プロダクト</h1>
         <p class="desc-text">
           興味のあるAPIを活用した個人開発のMVPの一部をデザインポートフォリオとして掲載しています。学習用に開発した実装コストの低いプロダクトです。今後も一部のプロダクトを掲載する予定です。
         </p>
+        <!-- icon -->
         <div class="links">
           <a
             href="https://github.com/per-pj"
@@ -74,14 +84,14 @@
           </a>
         </div>
       </div>
-      <!-- APIで表示 -->
+      <!-- 投稿を表示 -->
       <div id="works"></div>
     </main>
-    <!-- footer -->
+    <!---------- footer ------------>
     <footer class="footer">
       <p class="copyright">&copy; 2025 per-pj All Rights Reserved.</p>
     </footer>
-    <!-- js -->
+    <!---------- js ---------->
     <script src="script.js"></script>
   </body>
 </html>

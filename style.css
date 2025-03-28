@@ -4,9 +4,9 @@ body {
   padding: 0;
   font-family: 'Open Sans', 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #000;
+  background-color: var(--bg-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--text-color);
   font-weight: 500;
   letter-spacing: -0.01rem;
   line-height: 1.5;
@@ -14,6 +14,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+/* root */
+:root {
+  --sides-space: 3rem;
+  --sides-space-small: 1rem;
+  --bg-color: #000;
+  --text-color: #fff;
 }
 
 /* text */
@@ -29,9 +37,9 @@ p {
 
 /* ====== header ====== */
 .header {
-  background-color: #000;
-  color: #fff;
-  padding: 1rem 3rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem var(--sides-space);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,13 +56,22 @@ p {
   text-decoration: none;
 }
 
-.logo .logo-text {
-  font-size: 1.6rem;
-  color: #fff;
-  font-weight: 800;
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* nav */
+.logo-text {
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 800;
+  font-style: italic;
+  transform: rotate(-8deg);
+}
+
+/* menu */
 .nav {
   display: flex;
   align-items: center;
@@ -78,10 +95,10 @@ p {
   transition: all 0.1s ease;
 }
 .nav .nav-menu li a:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--text-color);
 }
 
-/* toggle-menu (初期状態では非表示) */
+/* toggle (初期状態では非表示) */
 .toggle-menu {
   display: none; /* デスクトップ表示では非表示 */
   background: none;
@@ -104,27 +121,24 @@ p {
   border-radius: 1px;
 }
 
+/* ====== main ====== */
 /* layout */
 .container {
   height: auto;
-  padding: 8rem 3rem 0 3rem;
+  padding: 8rem var(--sides-space) 0 var(--sides-space);
 }
 
 .content {
-  width: 70%;
+  width: 60%;
   margin: 0 auto 0 auto;
   text-align: center;
 }
 
-.links {
-  margin: 2rem 0;
-}
-
 /* text */
 .title-text {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .desc-text {
@@ -133,8 +147,44 @@ p {
   text-align: center;
 }
 
-/* ====== API ====== */
-/* posts-layout */
+/* icon */
+.links {
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-brands {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.fa-github:hover {
+  color: #2ea043;
+}
+
+.fa-behance:hover {
+  color: #1769ff;
+}
+
+.fa-solid {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.fa-envelope:hover {
+  color: #e0d60d;
+}
+
+/* ====== posts ====== */
+/* layout */
 #works {
   display: grid;
   gap: 1rem;
@@ -181,7 +231,7 @@ p {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
   background: #5d5d5d;
-  color: #fff;
+  color: var(--text-color);
   border-radius: 2rem;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -194,48 +244,16 @@ p {
 
 /* ====== footer ====== */
 .footer {
-  background-color: #000;
+  background-color: var(--bg-color);
   padding: 20px 40px;
   text-align: center;
   margin-top: 6rem;
 }
 
 .footer .copyright {
-  color: #fff;
+  color: var(--text-color);
   font-size: 0.8rem;
   opacity: 0.7;
-}
-
-/* ====== icon ====== */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.fa-brands {
-  font-size: 2.5rem;
-  color: #fff;
-  transition: color 0.3s;
-  margin: 2rem;
-}
-
-.fa-github:hover {
-  color: #2ea043;
-}
-
-.fa-behance:hover {
-  color: #1769ff;
-}
-
-.fa-solid {
-  font-size: 2.5rem;
-  color: #fff;
-  transition: color 0.3s;
-  margin: 2rem;
-}
-
-.fa-envelope:hover {
-  color: #d45f2d;
 }
 
 /* 🎯 ====== responsive-layout ====== */
@@ -270,7 +288,7 @@ a {
   }
 
   .header {
-    padding: 1rem;
+    padding: var(--sides-space-small);
   }
 
   .nav {
@@ -328,7 +346,7 @@ a {
     /* メニューオープン時、1本目の線を回転 */
     transform-origin: top right; /* 回転の中心を右上端に変更 */
     transform: rotate(-45deg);
-    background-color: #000;
+    background-color: var(--bg-color);
   }
 
   .toggle-menu.open span:nth-child(2) {
@@ -340,11 +358,11 @@ a {
     /* メニューオープン時、3本目の線を回転 */
     transform-origin: bottom right; /* 回転の中心を右下端に変更 */
     transform: rotate(45deg);
-    background-color: #000;
+    background-color: var(--bg-color);
   }
 
   .container {
-    padding: 6rem 1rem 0 1rem;
+    padding: 6rem var(--sides-space-small) 0 var(--sides-space-small);
   }
 
   .content {
