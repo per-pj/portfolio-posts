@@ -132,7 +132,7 @@ p {
   padding: 12rem var(--sides-space) 0 var(--sides-space);
 }
 
-.content {
+.hero-content {
   width: 80%;
   margin: 0 auto 0 auto;
   text-align: center;
@@ -145,7 +145,7 @@ p {
   margin-bottom: 1rem;
 }
 
-.text-container {
+.text-content {
   width: clamp(300px, 60%, 600px);
   margin: 5rem auto 8rem auto;
   text-align: center;
@@ -385,7 +385,7 @@ a {
     padding: 6rem var(--sides-space-small) 0 var(--sides-space-small);
   }
 
-  .content {
+  .hero-content {
     width: 100%;
     margin: auto 0;
   }
@@ -398,11 +398,32 @@ a {
     font-size: 2rem;
   }
 
+  .fa-brands {
+    font-size: 2.5rem;
+    margin: 3rem 1rem 6rem 1rem;
+  }
+
+  .fa-solid {
+    font-size: 2.5rem;
+    margin: 3rem 1rem 6rem 1rem;
+  }
+
   .works-content {
     width: 90%;
   }
 
   #works {
     padding: 0;
+  }
+
+  .work-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+  }
+
+  .work-description {
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
