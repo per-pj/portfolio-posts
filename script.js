@@ -67,7 +67,7 @@ function displayWorks(contents) {
     // サービスURLリンク
     const link = document.createElement('a');
     link.href = work.url;
-    link.textContent = 'Website';
+    link.textContent = 'Websiteにアクセス';
     link.target = '_blank';
     link.classList.add('work-link');
 

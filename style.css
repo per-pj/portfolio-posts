@@ -18,10 +18,14 @@ body {
 
 /* root */
 :root {
-  --sides-space: 3rem;
+  --sides-space: 4rem;
   --sides-space-small: 1rem;
   --bg-color: #000;
   --text-color: #fff;
+  --card-color: #202020;
+  --card-text-color: #fff;
+  --btn-color: #5d5d5d;
+  --btn-hover-color: #888;
 }
 
 /* text */
@@ -39,7 +43,7 @@ p {
 .header {
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 1rem var(--sides-space);
+  padding: 2rem var(--sides-space);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +68,7 @@ p {
 
 .logo-text {
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--text-color);
   font-family: 'DM Serif Display', serif;
   font-weight: 800;
   font-style: italic;
@@ -89,8 +93,8 @@ p {
 }
 
 .nav .nav-menu li a {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.1s ease;
 }
@@ -125,26 +129,33 @@ p {
 /* layout */
 .container {
   height: auto;
-  padding: 8rem var(--sides-space) 0 var(--sides-space);
+  padding: 12rem var(--sides-space) 0 var(--sides-space);
 }
 
 .content {
-  width: 60%;
+  width: 80%;
   margin: 0 auto 0 auto;
   text-align: center;
 }
 
 /* text */
 .title-text {
-  font-size: 6.5rem;
+  font-size: 8rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
-.desc-text {
-  font-size: 1.1rem;
-  font-weight: 500;
+.text-container {
+  width: clamp(300px, 60%, 600px);
+  margin: 5rem auto 8rem auto;
   text-align: center;
+}
+
+.desc-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* icon */
@@ -158,14 +169,14 @@ a {
 }
 
 .fa-brands {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: var(--text-color);
   transition: color 0.3s;
-  margin: 2rem 1.5rem 5rem 1.5rem;
+  margin: 3rem 1.5rem 6rem 1.5rem;
 }
 
 .fa-github:hover {
-  color: #2ea043;
+  color: #555;
 }
 
 .fa-behance:hover {
@@ -173,18 +184,24 @@ a {
 }
 
 .fa-solid {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: var(--text-color);
   transition: color 0.3s;
-  margin: 2rem 1.5rem 5rem 1.5rem;
+  margin: 3rem 1.5rem 6rem 1.5rem;
 }
 
 .fa-envelope:hover {
-  color: #e0d60d;
+  color: #cecece;
 }
 
 /* ====== posts ====== */
 /* layout */
+.works-content {
+  width: clamp(300px, 50%, 600px);
+  margin: 5rem auto 8rem auto;
+  text-align: center;
+}
+
 #works {
   display: grid;
   gap: 2rem;
@@ -194,10 +211,11 @@ a {
 
 /* post-card */
 .work-item {
-  background: #202020;
+  background: var(--card-color);
+  color: var(--card-text-color);
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
 }
@@ -215,22 +233,25 @@ a {
 
 /* title-text */
 .work-title {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin: 0.5rem 0;
 }
 
 /* desc-text */
 .work-description {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 /* link-btn */
 .work-link {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  background: #5d5d5d;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--btn-color);
   color: var(--text-color);
   border-radius: 2rem;
   text-decoration: none;
@@ -238,7 +259,7 @@ a {
 }
 
 .work-link:hover {
-  background: #888;
+  background: var(--btn-hover-color);
   transform: scale(1.05);
 }
 
@@ -252,26 +273,25 @@ a {
 
 .footer .copyright {
   color: var(--text-color);
-  font-size: 1.2rem;
-  opacity: 0.7;
+  font-size: 1.1rem;
 }
 
 /* 🎯 ====== responsive-layout ====== */
 @media (min-width: 1024px) {
   #works {
-    grid-template-columns: repeat(3, 1fr); /* PC：3列 */
+    grid-template-columns: repeat(1, 1fr); /* PC：1列 */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   #works {
-    grid-template-columns: repeat(2, 1fr); /* タブレット：2列 */
+    grid-template-columns: repeat(1, 1fr); /* タブレット：1列 */
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
   #works {
-    grid-template-columns: repeat(2, 1fr); /* スマホ（中）：2列 */
+    grid-template-columns: repeat(1, 1fr); /* スマホ（中）：1列 */
   }
 }
 
@@ -375,7 +395,11 @@ a {
   }
 
   .desc-text {
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+
+  .works-content {
+    width: 90%;
   }
 
   #works {
