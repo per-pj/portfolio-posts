@@ -83,3 +83,37 @@ function displayWorks(contents) {
 }
 
 fetchData();
+
+// フェードインアニメーションの実装
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.container');
+
+  function checkFadeIn() {
+    if (!container) {
+      return;
+    }
+
+    // 要素の画面上の位置を取得
+    const rect = container.getBoundingClientRect();
+
+    // 要素が画面内に入ったかを判定 (多少余裕を持たせることも可能)
+    const isVisible =
+      (rect.top >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight)) ||
+      (rect.bottom >= 0 &&
+        rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight));
+
+    // 要素が画面内に入ったら fade-in クラスを追加
+    if (isVisible && !container.classList.contains('fade-in')) {
+      container.classList.add('fade-in');
+    }
+  }
+
+  // スクロールイベントが発生するたびに checkFadeIn 関数を実行
+  window.addEventListener('scroll', checkFadeIn);
+
+  // ページロード時にも一度チェック (初期位置によっては表示されるべき場合もある)
+  checkFadeIn();
+});
