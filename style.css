@@ -130,6 +130,10 @@ p {
 .container {
   height: auto;
   padding: 12rem var(--sides-space) 0 var(--sides-space);
+  background-image: url('orange.svg'), url('blue.svg'), url('green.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 35%, 35%, 30%;
+  background-position: top 40% right 5%, top 65% left 5%, top 100% right 5%;
 }
 
 .hero-content {
