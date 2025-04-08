@@ -130,10 +130,11 @@ p {
 .container {
   height: auto;
   padding: 12rem var(--sides-space) 0 var(--sides-space);
-  background-image: url('orange.svg'), url('blue.svg'), url('green.svg');
+  background-image: url('img/orange.svg'), url('img/blue.svg'),
+    url('img/green.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 35%, 35%, 30%;
-  background-position: top 25rem right 5%, top 50rem left 5%, top 65rem right 5%;
+  background-position: top 25rem right 5%, top 50rem left 5%, top 70rem right 5%;
   opacity: 0;
   transition: opacity 3.2s ease;
 }
@@ -286,6 +287,27 @@ a {
   font-size: 1.1rem;
 }
 
+/* ====== about ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 4rem;
+}
+.grid-item {
+  background: #000;
+  color: var(--card-text-color);
+  border: 1px solid var(--card-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
 /* 🎯 ====== responsive-layout ====== */
 @media (min-width: 1024px) {
   #works {
@@ -435,5 +457,9 @@ a {
   .work-description {
     font-size: 1rem;
     font-weight: 400;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* 1列にする */
   }
 }
