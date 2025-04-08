@@ -308,6 +308,9 @@ a {
   transform: translateY(-5px);
 }
 
+.link-text {
+  border-bottom: 1px solid var(--text-color);
+}
 /* 🎯 ====== responsive-layout ====== */
 @media (min-width: 1024px) {
   #works {
