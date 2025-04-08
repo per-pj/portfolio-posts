@@ -10,8 +10,8 @@
 .container {
   height: auto;
   padding: 12rem var(--sides-space) 0 var(--sides-space);
-  background-image: url('../../public/img/orange.svg'),
-    url('../../public/img/blue.svg'), url('../../public/img/green.svg');
+  background-image: url('../img/orange.svg'), url('../img/blue.svg'),
+    url('../img/green.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 35%, 35%, 30%;
   background-position: top 25rem right 5%, top 50rem left 5%, top 70rem right 5%;
