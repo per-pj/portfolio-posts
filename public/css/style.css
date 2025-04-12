@@ -7,7 +7,7 @@
     url('../img/green.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 35%, 35%, 30%;
-  background-position: top 25rem right 5%, top 50rem left 5%, top 70rem right 5%;
+  background-position: top 30rem right 5%, top 60rem left 5%, top 80rem right 5%;
   opacity: 0;
   transition: opacity 3.2s ease;
 }
@@ -89,6 +89,7 @@ a {
 
 #works {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-content: center;
   padding: 0;
